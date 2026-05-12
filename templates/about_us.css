@@ -1,0 +1,22 @@
+/*h1{
+	color: red;
+	background: green;
+	font-style: italic;
+	font-weight: lighter;
+	font-family: serif;
+	font-variant: small-caps;
+	margin: 2px;
+	padding: 5px;
+	border: blue;
+	border-color: blue;
+}*/
+
+.heading{
+	border: 2em;
+	border-color: red;
+	color: blue;
+
+}
+/*#myhead1{
+	color: green;
+}*/
