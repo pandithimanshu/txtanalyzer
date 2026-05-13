@@ -2,11 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="\mybeauty.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container{
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea{
+            resize: none;
+        }
+
+        .gender{
+            margin-top: 15px;
+        }
+
+        .gender label{
+            margin-right: 15px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
-<p>email address: mrperfectpandit</p>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <input type="text" name="name" placeholder="Enter your name" required>
+
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <div class="gender">
+                <p>Select Gender:</p>
+
+                <label>
+                    <input type="radio" name="gender" value="Male" required>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Other">
+                    Other
+                </label>
+            </div>
+
+            <textarea name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock title %} nav using flexbox</title>
+</head>
+
+<style>
+    :root{
+
+        --image:src="../media/img/down_arrow.png";
+    }
+
+    *{
+
+        margin: 0px;
+        padding: 0px;
+    }
+/* 
+    .na{
+        display: flex;
+       
+
+    } */
+
+    ul{
+        /* background-color: rgb(236, 232, 225); */
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        width: 60vw;
+        margin-left: 20vw;
+        margin-top: 5px;
+        
+        position: sticky;
+        
+        
+    }
+
+    #list{
+        display: flex;
+        /* background-color: rgb(233, 230, 225); */
+        width: 100%;
+        justify-content: flex-end;
+        gap:10px;
+        
+        
+        
+        
+    }
+
+    li:hover{
+        color: rgb(55, 189, 199);
+        cursor: pointer;
+
+    }
+    .image{
+        align-self: flex-start;
+    }
+
+    #list img{
+        size: 20px;
+        height: 10px;
+    }
+    
+
+
+</style>
+
+
+<body>
+
+    <nav>
+        <div class="na">
+            <!-- <div class="logo">
+                
+            </div>
+             -->
+            <ul>
+
+            <li class="image"><img src="../media/img/nav_logo.png" alt="logo"></li>
+
+            <div id="list">
+            <li>Product <img src="../media/img/down_arrow.png" alt=""></li>
+            <li>Pricing <img src="../media/img/down_arrow.png" alt= ""></li>
+            <li>Resources <img src="../media/img/down_arrow.png" alt= ""></li>
+            <li>About Us <img src="../media/img/down_arrow.png" alt= ""></li>
+        </div>
+            
+            </ul>
+            
+        </div>
+    </nav>
+
+    {% block body %} {% endblock body %}
+    
+</body>
+</html>

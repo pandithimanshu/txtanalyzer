@@ -1,18 +1,14 @@
-{% extends 'base.html' %}
-
 <!DOCTYPE html>
 <html lang ="en">
 <head>
     <meta charset="UTF-8">
-    <title>H.SHARMA'S WEBSITE</title>
+    <title>mr_perfect_pandit</title>
     {% load static %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'bootstrap.min.css'%}">
 </head>
-
-{% block body %}
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-$gray-600" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="http://127.0.0.1:8000/homepage">HOMEPAGE</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="">h.sharma</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -73,11 +69,10 @@
   <label class="custom-control-label" for="customSwitch5">convert into uppercase</label><br>
 </div>
 <div class="custom-control custom-switch">
-    <input type="checkbox" class="custom-control-input" id="customSwitch7" name="removed_data">
-  <label class="custom-control-label" for="customSwitch7">gives removed data</label><br><hr>
+    <input type="checkbox" class="custom-control-input" id="customSwitch6" name="char_check">
+  <label class="custom-control-label" for="customSwitch6">count charecters</label><br><hr>
 </div>
 <button type="submit" class="btn btn-primary btn-lg btn-block">analize this text now</button>
 </form>>
 </body>
-{% endblock body %}
 </html>
