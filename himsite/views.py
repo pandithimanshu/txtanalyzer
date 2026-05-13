@@ -1,6 +1,8 @@
 # this file my_intro.txt created by himanshu sharma
 from django.http import HttpResponse
 from django.shortcuts import render
+from datetime import datetime
+from home.models import Contact
 
 
 def index(request):
@@ -16,6 +18,16 @@ def about(request):
 
 
 def contact(request):
+    if request.method=="POST":
+        name= request.POST.get('name')
+        phone= request.POST.get('phone')
+        email= request.POST.get('email')
+        gender= request.POST.get('gender')
+        desc= request.POST.get('desc')
+
+        contact = Contact(name=name,email= email, phone = phone, gender= gender, desc= desc,date= datetime.today())
+        contact.save()
+        
     return render(request, 'contact_us.html')
 
 
